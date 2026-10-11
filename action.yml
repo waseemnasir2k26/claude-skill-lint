@@ -1,0 +1,57 @@
+name: "Claude Skill Lint"
+description: "Lint Claude Code SKILL.md packs: frontmatter, triggers, listing budget, collisions, links, secrets."
+author: "Waseem Nasir"
+branding:
+  icon: check-circle
+  color: orange
+inputs:
+  path:
+    description: "Space-separated skill folders to lint"
+    required: false
+    default: ".claude/skills"
+  format:
+    description: "text, json, sarif or md"
+    required: false
+    default: "text"
+  fail-on:
+    description: "error, warning, info or never"
+    required: false
+    default: "error"
+  context:
+    description: "Context window used for the budget: 200k or 1m"
+    required: false
+    default: "200k"
+  budget-chars:
+    description: "Fixed listing budget in characters (overrides context)"
+    required: false
+    default: ""
+  output:
+    description: "Write the report to this file (useful with format: sarif)"
+    required: false
+    default: ""
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Install
+      shell: bash
+      run: python -m pip install --quiet "${{ github.action_path }}"
+    - name: Lint skills
+      shell: bash
+      env:
+        IN_PATH: ${{ inputs.path }}
+        IN_FORMAT: ${{ inputs.format }}
+        IN_FAIL: ${{ inputs.fail-on }}
+        IN_CONTEXT: ${{ inputs.context }}
+        IN_BUDGET: ${{ inputs.budget-chars }}
+        IN_OUTPUT: ${{ inputs.output }}
+      run: |
+        args=(check)
+        # shellcheck disable=SC2206
+        paths=($IN_PATH)
+        args+=("${paths[@]}" --format "$IN_FORMAT" --fail-on "$IN_FAIL" --context "$IN_CONTEXT")
+        if [ -n "$IN_BUDGET" ]; then args+=(--budget-chars "$IN_BUDGET"); fi
+        if [ -n "$IN_OUTPUT" ]; then args+=(--output "$IN_OUTPUT"); fi
+        claude-skill-lint "${args[@]}"

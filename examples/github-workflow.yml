@@ -1,0 +1,28 @@
+# Drop into .github/workflows/skills.yml of a repo that ships a .claude/skills folder.
+name: Lint skills
+on: [push, pull_request]
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: waseemnasir2k26/claude-skill-lint@v1.0.0
+        with:
+          path: .claude/skills
+          fail-on: error
+          context: 200k
+      # Optional: upload findings to GitHub code scanning
+      - uses: waseemnasir2k26/claude-skill-lint@v1.0.0
+        if: always()
+        with:
+          path: .claude/skills
+          format: sarif
+          output: skill-lint.sarif
+          fail-on: never
+      - uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: skill-lint.sarif

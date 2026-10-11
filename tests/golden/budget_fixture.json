@@ -1,0 +1,237 @@
+{
+  "budget_chars": 700,
+  "entry_cap": 1536,
+  "skills": 24,
+  "names_cost_chars": 368,
+  "total_chars_full": 4006,
+  "total_chars_after": 658,
+  "uniform_fit_len": 12,
+  "with_description": 3,
+  "name_only_count": 21,
+  "capped": [],
+  "name_only": [
+    "bad-script",
+    "big-body",
+    "calendar-wrangler",
+    "colon-yaml",
+    "csv-cleaner",
+    "dead-links",
+    "doc-to-pdf",
+    "first-person",
+    "git-commit-writer",
+    "late-trigger",
+    "leaked-secret",
+    "md-to-pdf",
+    "something-else",
+    "no-triggers",
+    "pdf-form-filler",
+    "personal-paths",
+    "report-builder",
+    "sql-review",
+    "tiny-desc",
+    "vague-helper",
+    "report-builder"
+  ],
+  "entries": [
+    {
+      "name": "api-doc-generator",
+      "status": "full",
+      "description_chars": 181,
+      "shown_chars": 181,
+      "fix_recovers_chars": 121
+    },
+    {
+      "name": "Bad_Name",
+      "status": "full",
+      "description_chars": 105,
+      "shown_chars": 105,
+      "fix_recovers_chars": 45
+    },
+    {
+      "name": "bad-script",
+      "status": "name-only",
+      "description_chars": 101,
+      "shown_chars": 0,
+      "fix_recovers_chars": 41
+    },
+    {
+      "name": "big-body",
+      "status": "name-only",
+      "description_chars": 90,
+      "shown_chars": 0,
+      "fix_recovers_chars": 30
+    },
+    {
+      "name": "calendar-wrangler",
+      "status": "name-only",
+      "description_chars": 606,
+      "shown_chars": 0,
+      "fix_recovers_chars": 546
+    },
+    {
+      "name": "colon-yaml",
+      "status": "name-only",
+      "description_chars": 128,
+      "shown_chars": 0,
+      "fix_recovers_chars": 68
+    },
+    {
+      "name": "csv-cleaner",
+      "status": "name-only",
+      "description_chars": 195,
+      "shown_chars": 0,
+      "fix_recovers_chars": 135
+    },
+    {
+      "name": "dead-links",
+      "status": "name-only",
+      "description_chars": 103,
+      "shown_chars": 0,
+      "fix_recovers_chars": 43
+    },
+    {
+      "name": "doc-to-pdf",
+      "status": "name-only",
+      "description_chars": 167,
+      "shown_chars": 0,
+      "fix_recovers_chars": 107
+    },
+    {
+      "name": "first-person",
+      "status": "name-only",
+      "description_chars": 96,
+      "shown_chars": 0,
+      "fix_recovers_chars": 36
+    },
+    {
+      "name": "git-commit-writer",
+      "status": "name-only",
+      "description_chars": 228,
+      "shown_chars": 0,
+      "fix_recovers_chars": 168
+    },
+    {
+      "name": "late-trigger",
+      "status": "name-only",
+      "description_chars": 342,
+      "shown_chars": 0,
+      "fix_recovers_chars": 282
+    },
+    {
+      "name": "leaked-secret",
+      "status": "name-only",
+      "description_chars": 91,
+      "shown_chars": 0,
+      "fix_recovers_chars": 31
+    },
+    {
+      "name": "md-to-pdf",
+      "status": "name-only",
+      "description_chars": 165,
+      "shown_chars": 0,
+      "fix_recovers_chars": 105
+    },
+    {
+      "name": "missing-description",
+      "status": "full",
+      "description_chars": 0,
+      "shown_chars": 0,
+      "fix_recovers_chars": 0
+    },
+    {
+      "name": "something-else",
+      "status": "name-only",
+      "description_chars": 99,
+      "shown_chars": 0,
+      "fix_recovers_chars": 39
+    },
+    {
+      "name": "no-triggers",
+      "status": "name-only",
+      "description_chars": 89,
+      "shown_chars": 0,
+      "fix_recovers_chars": 29
+    },
+    {
+      "name": "pdf-form-filler",
+      "status": "name-only",
+      "description_chars": 184,
+      "shown_chars": 0,
+      "fix_recovers_chars": 124
+    },
+    {
+      "name": "personal-paths",
+      "status": "name-only",
+      "description_chars": 102,
+      "shown_chars": 0,
+      "fix_recovers_chars": 42
+    },
+    {
+      "name": "report-builder",
+      "status": "name-only",
+      "description_chars": 124,
+      "shown_chars": 0,
+      "fix_recovers_chars": 64
+    },
+    {
+      "name": "sql-review",
+      "status": "name-only",
+      "description_chars": 191,
+      "shown_chars": 0,
+      "fix_recovers_chars": 131
+    },
+    {
+      "name": "tiny-desc",
+      "status": "name-only",
+      "description_chars": 11,
+      "shown_chars": 0,
+      "fix_recovers_chars": 0
+    },
+    {
+      "name": "vague-helper",
+      "status": "name-only",
+      "description_chars": 83,
+      "shown_chars": 0,
+      "fix_recovers_chars": 23
+    },
+    {
+      "name": "report-builder",
+      "status": "name-only",
+      "description_chars": 111,
+      "shown_chars": 0,
+      "fix_recovers_chars": 51
+    }
+  ],
+  "after_fix": {
+    "budget_chars": 700,
+    "entry_cap": 1536,
+    "skills": 24,
+    "names_cost_chars": 368,
+    "total_chars_full": 1745,
+    "total_chars_after": 678,
+    "uniform_fit_len": 12,
+    "with_description": 6,
+    "name_only_count": 18,
+    "capped": [],
+    "name_only": [
+      "colon-yaml",
+      "csv-cleaner",
+      "dead-links",
+      "doc-to-pdf",
+      "first-person",
+      "git-commit-writer",
+      "late-trigger",
+      "leaked-secret",
+      "md-to-pdf",
+      "something-else",
+      "no-triggers",
+      "pdf-form-filler",
+      "personal-paths",
+      "report-builder",
+      "sql-review",
+      "tiny-desc",
+      "vague-helper",
+      "report-builder"
+    ]
+  }
+}

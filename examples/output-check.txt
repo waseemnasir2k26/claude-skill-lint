@@ -1,0 +1,63 @@
+fixtures/skills-user/report-builder/SKILL.md:2: warning SKL012 Skill name `report-builder` is defined 2 times (fixtures/skills-user/report-builder, fixtures/skills/report-builder).
+    fix: Rename one copy or delete the shadowed one; only one can win.
+fixtures/skills/bad-name-case/SKILL.md:2: warning SKL002 Name `Bad_Name` is not lowercase kebab-case.
+    fix: Rename to `bad-name`.
+fixtures/skills/bad-name-case/SKILL.md:2: warning SKL002 Name `Bad_Name` does not match its folder `bad-name-case`.
+    fix: Set `name: bad-name-case` (or rename the folder) so name and folder agree.
+fixtures/skills/bad-script/SKILL.md:1: warning SKL014 `scripts/run.sh` has no shebang line (#!...).
+    fix: Add `#!/usr/bin/env bash` as the first line.
+fixtures/skills/big-body/SKILL.md:5: info SKL008 Body is 603 lines (> 500).
+    fix: Keep SKILL.md short; move detail into references/ files loaded on demand.
+fixtures/skills/calendar-wrangler/SKILL.md:3: warning SKL003 Description is 606 chars (> 500): it eats listing budget and risks being dropped.
+    fix: Trim to about 200-500 chars; keep trigger phrases first.
+fixtures/skills/calendar-wrangler/SKILL.md:3: warning SKL007 Trigger/routing text starts at char 536, past the 250-char front-loading target; it is the first thing lost when text is cut.
+    fix: Move the 'Use when ...' clause into the first 250 chars.
+fixtures/skills/colon-yaml/SKILL.md:3: warning SKL001 `description` is an unquoted value containing ': ' which strict YAML parsers reject.
+    fix: Wrap the description in quotes or use a `|` block scalar.
+fixtures/skills/dead-links/SKILL.md:8: warning SKL009 Referenced file `references/guide.md` does not exist.
+    fix: Create `references/guide.md` or fix the path (relative to the skill folder).
+fixtures/skills/dead-links/SKILL.md:8: warning SKL009 Referenced file `scripts/scan.py` does not exist.
+    fix: Create `scripts/scan.py` or fix the path (relative to the skill folder).
+fixtures/skills/doc-to-pdf/SKILL.md:3: warning SKL006 Overlaps with `md-to-pdf` but has no routing line.
+    fix: Append `Do NOT use for: <other task> -> <other-skill>.`
+fixtures/skills/doc-to-pdf/SKILL.md:3: warning SKL013 Collides with `md-to-pdf` (score 0.97, jaccard 0.91, cosine 0.97); shared triggers: 'convert markdown to pdf', 'export this document as pdf', 'make a pdf'.
+    fix: Make the two descriptions mutually exclusive or merge `doc-to-pdf` and `md-to-pdf`.
+fixtures/skills/first-person/SKILL.md:3: warning SKL005 Description has no 'use when' clause or quoted trigger phrases.
+    fix: Add e.g. `Use when the user asks to "…", "…", or mentions …`.
+fixtures/skills/first-person/SKILL.md:3: warning SKL015 Description is first-person / instruction-style ('I help you write polished co...').
+    fix: Write in third person: what the skill does and when Claude should pick it.
+fixtures/skills/late-trigger/SKILL.md:3: warning SKL007 Trigger/routing text starts at char 278, past the 250-char front-loading target; it is the first thing lost when text is cut.
+    fix: Move the 'Use when ...' clause into the first 250 chars.
+fixtures/skills/leaked-secret/SKILL.md:9: error SKL011 Possible hard-coded api_key: `k9f3***`.
+    fix: Remove it, rotate the credential, and read it from an environment variable.
+fixtures/skills/md-to-pdf/SKILL.md:3: warning SKL006 Overlaps with `doc-to-pdf` but has no routing line.
+    fix: Append `Do NOT use for: <other task> -> <other-skill>.`
+fixtures/skills/md-to-pdf/SKILL.md:3: warning SKL013 Collides with `doc-to-pdf` (score 0.97, jaccard 0.91, cosine 0.97); shared triggers: 'convert markdown to pdf', 'export this document as pdf', 'make a pdf'.
+    fix: Make the two descriptions mutually exclusive or merge `md-to-pdf` and `doc-to-pdf`.
+fixtures/skills/missing-description/SKILL.md:1: error SKL001 Frontmatter is missing a non-empty `description`.
+    fix: Add `description:` to the frontmatter.
+fixtures/skills/name-mismatch/SKILL.md:2: warning SKL002 Name `something-else` does not match its folder `name-mismatch`.
+    fix: Rename the folder to `something-else` or set `name: name-mismatch`.
+fixtures/skills/no-frontmatter/SKILL.md:1: error SKL001 No YAML frontmatter: file must start with '---'.
+    fix: Add a frontmatter block with `name:` and `description:`.
+fixtures/skills/no-triggers/SKILL.md:3: warning SKL005 Description has no 'use when' clause or quoted trigger phrases.
+    fix: Add e.g. `Use when the user asks to "…", "…", or mentions …`.
+fixtures/skills/personal-paths/SKILL.md:8: warning SKL010 Hard-coded personal path `C:\Users\jdoe` will break on other machines.
+    fix: Use a relative path, `~`, `${CLAUDE_PLUGIN_ROOT}` or an env var.
+fixtures/skills/report-builder/SKILL.md:2: warning SKL012 Skill name `report-builder` is defined 2 times (fixtures/skills-user/report-builder, fixtures/skills/report-builder).
+    fix: Rename one copy or delete the shadowed one; only one can win.
+fixtures/skills/tiny-desc/SKILL.md:3: warning SKL003 Description is only 11 chars (< 40): too little to route on.
+    fix: Say what it does and when to use it, with 2-3 trigger phrases.
+fixtures/skills/tiny-desc/SKILL.md:3: warning SKL005 Description has no 'use when' clause or quoted trigger phrases.
+    fix: Add e.g. `Use when the user asks to "…", "…", or mentions …`.
+fixtures/skills/vague-helper/SKILL.md:3: warning SKL004 Vague wording: 'helps with', 'various tasks', 'and more', 'general purpose'.
+    fix: Replace with the concrete task, file type or tool the skill handles.
+fixtures/skills/vague-helper/SKILL.md:3: warning SKL005 Description has no 'use when' clause or quoted trigger phrases.
+    fix: Add e.g. `Use when the user asks to "…", "…", or mentions …`.
+
+25 skills checked: 3 errors, 24 warnings, 1 info
+
+Skill listing budget: 8,000 chars (per-entry cap 1536)
+  skills: 24   names alone: 368 chars   with every description: 4,006 chars (50% of budget)
+  result: everything fits; every skill keeps its full description.
+  if every description were trimmed to <= 200 chars: 24 keep a description, 0 name-only -> 0 more skills described

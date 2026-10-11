@@ -1,0 +1,2 @@
+1 colliding pairs (threshold 0.45):
+  0.97  doc-to-pdf  <->  md-to-pdf  (jaccard 0.91, cosine 0.97; terms: content, markdown, convert, document)  shared triggers: convert markdown to pdf, export this document as pdf, make a pdf

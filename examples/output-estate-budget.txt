@@ -1,0 +1,14 @@
+Skill listing budget: 8,000 chars (per-entry cap 1536)
+  skills: 189   names alone: 2,854 chars   with every description: 129,902 chars (1624% of budget)
+  result: 8 keep a description, 181 are name-only (listing 7,889 chars)
+  to keep every description you would need <= 25 chars each
+  name-only (Claude sees no description): meta-analyze, meta-attribution, meta-audit, meta-budget, meta-capi, meta-competitor, meta-create, meta-creative, meta-dna, meta-generate, meta-landing, meta-m
+  if every description were trimmed to <= 200 chars: 25 keep a description, 164 name-only -> 17 more skills described
+
+Skill listing budget: 40,000 chars (per-entry cap 1536)
+  skills: 189   names alone: 2,854 chars   with every description: 129,902 chars (325% of budget)
+  result: 62 keep a description, 127 are name-only (listing 39,664 chars)
+  1 descriptions exceed the 1536-char entry cap and are cut
+  to keep every description you would need <= 195 chars each
+  name-only (Claude sees no description): aeo-daily, aeo-research, agency-brain, arena, banana, brand-proof-reel, browse, caveman, caveman-commit, caveman-help, caveman-review, ceo, cinematic-reel, ci
+  if every description were trimmed to <= 200 chars: 184 keep a description, 5 name-only -> 122 more skills described

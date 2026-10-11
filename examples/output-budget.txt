@@ -1,0 +1,31 @@
+Skill listing budget: 700 chars (per-entry cap 1536)
+  skills: 24   names alone: 368 chars   with every description: 4,006 chars (572% of budget)
+  result: 3 keep a description, 21 are name-only (listing 658 chars)
+  to keep every description you would need <= 12 chars each
+  name-only (Claude sees no description): bad-script, big-body, calendar-wrangler, colon-yaml, csv-cleaner, dead-links, doc-to-pdf, first-person, git-commit-writer, late-trigger, leaked-secret, md-to-pdf, something-else, no-triggers, pdf-form-filler ...
+  if every description were trimmed to <= 60 chars: 6 keep a description, 18 name-only -> 3 more skills described
+
+skill                              status      desc  shown  fix recovers
+calendar-wrangler                  name-only    606      0           546
+late-trigger                       name-only    342      0           282
+git-commit-writer                  name-only    228      0           168
+csv-cleaner                        name-only    195      0           135
+sql-review                         name-only    191      0           131
+pdf-form-filler                    name-only    184      0           124
+api-doc-generator                  full         181    181           121
+doc-to-pdf                         name-only    167      0           107
+md-to-pdf                          name-only    165      0           105
+colon-yaml                         name-only    128      0            68
+report-builder                     name-only    124      0            64
+report-builder                     name-only    111      0            51
+Bad_Name                           full         105    105            45
+dead-links                         name-only    103      0            43
+personal-paths                     name-only    102      0            42
+bad-script                         name-only    101      0            41
+something-else                     name-only     99      0            39
+first-person                       name-only     96      0            36
+leaked-secret                      name-only     91      0            31
+big-body                           name-only     90      0            30
+no-triggers                        name-only     89      0            29
+vague-helper                       name-only     83      0            23
+total recoverable                                                   2261
